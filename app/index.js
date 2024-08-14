@@ -1,6 +1,6 @@
 const $ = document
 
-let amethystSound = new Audio('./music/sound effects/logo/amethyst.mp3')
+let amethystSound = new Audio('./music/sound effects/logo/amethyst.m4a')
 let dynamiteSound = new Audio('./music/sound effects/logo/Creeper_fuse.ogg')
 const modal = $.querySelector('.modal-container')
 const accessBtn = $.querySelector('.access-btn')
@@ -34,7 +34,7 @@ accessBtn.addEventListener('click', e => {
         logo.style.display = 'inline-block'
         setTimeout(() =>{
             soundEffectsFlag = true
-            // soundEffectsFlag && amethystSound.play()
+            soundEffectsFlag && amethystSound.play()
         },1000)
     },1000)
 
