@@ -1,0 +1,73 @@
+body{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+}
+.menu-container{
+    width: 25vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main svg{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.main svg:active{
+    opacity: .9;
+    transform: scale(.9);
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.menu-btn{
+    display: inline-block;
+    color: white;
+    font-size: xx-large;
+    font-family: Roboto;
+    cursor: pointer;
+}
+.menu-btn:active{
+    opacity: .9;
+    transform: scale(.9);
+}
+
+.code{
+    position: fixed;
+    transform: rotate(90deg) translate(0px,-50%);
+    top: 50%;
+    right: 0px;
+    color: #FFF;
+    font-size: 10px;
+}
+
+@media screen and (max-height:481px){
+    .menu-btn{
+        font-size: x-large;
+    }
+    .menu-container{
+        align-items: start;
+    }
+    .menu{
+        gap: 15px;
+        margin-top: 5px;
+    }
+}

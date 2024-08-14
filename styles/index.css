@@ -1,0 +1,191 @@
+body{
+    overflow: hidden;
+    background-color: rgba(27, 27, 27, 0.3);
+}
+
+.modal-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    background-color: #fff;
+    z-index: 1111;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.modal-head{
+    font-family: Roboto;
+    padding-bottom: 5px;
+    border-bottom: 1px rgba(65, 63, 63,.1) solid;
+}
+.modal-btn-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.logo-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.logo-main-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 10px;
+}
+.logo-img-container{
+    position: relative;
+}
+.logo-main-container h1 {
+    font-size: 6rem ;
+    color: #c0392b;
+    font-weight: bold;
+    text-wrap: nowrap;
+    text-shadow: black 1px 1px 1px;
+    font-family: Romanica;
+    z-index: 1;
+    animation: logo-text 4s ease;
+}
+.logo-img-container svg {
+    position: absolute;
+    color: #f7effd;
+}
+
+.logo-img-container img {
+    height: 7.5rem;
+    transform: rotate(-20deg);
+}
+
+.loading-text{
+    font-size: large;
+    font-weight: bold;
+    font-family: Venite;
+    color: white;
+    float: right;
+    margin-right: 39px;
+}
+.loading-container{
+    position: relative;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    animation: background 1s ease;
+}
+.loading-main-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+}
+.progress-bar-container{
+    border: 5px solid rgba(255,255,255) ;
+    padding: 2px;
+    width: 80%;
+    margin: 39px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.progress-main-container{
+    width: 100%;
+}
+.progress-bar{
+    /* background-image:linear-gradient(-45deg,rgba(255,255,255,.9) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.9) 75%,transparent 75%,transparent); */
+    background-color: #fff;
+}
+.progress{
+    animation: load 5.5s linear;
+}
+.game-text-container{
+    display: flex;
+}
+.game-text{
+    color: #c0392b;
+    font-size: 4rem;
+    font-family: Roboto;
+    margin-left: 10px;
+}
+.game-logo{
+    width: 115px;
+    transform: rotate(-80deg);
+    margin: -15px;
+    position: relative;
+}
+.dynamite-fire{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 48px;
+    top: -23px;
+}
+
+.code{
+    position: fixed;
+    transform: rotate(90deg) translate(0px,-50%);
+    top: 50%;
+    right: 0px;
+    opacity: .1;
+}
+
+@keyframes logo-text {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes shining {
+    0%{
+        transform: scale(.5);
+        display: inline-block;
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(.5);
+    }
+}
+@keyframes background {
+    0%{
+        height: 0vh;
+    }
+    100%{
+        height: 100vh;
+    }
+}
+
+@keyframes load {
+    from {
+        width: 0px;
+    }
+    to {
+        width:100%;
+    }
+}
+@media screen and (max-height:481px){
+    .modal-head h3{
+        font-weight: 450;
+        font-size: large;
+    }
+    .modal-container{
+        width: 50%;
+    }
+    .logo-main-container h1{
+        font-size: 4rem;
+    }
+    .logo-main-container img {
+        height: 5rem;
+    }
+    .logo-img-container svg {
+        /* width: 20px; */
+    }
+}
