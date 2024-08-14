@@ -30,12 +30,10 @@ gameLogoFire.style.display = 'none'
 accessBtn.addEventListener('click', e => {
     $.body.style.backgroundColor = '#fff'
     modal.style.display = 'none'
+    soundEffectsFlag = true
+    soundEffectsFlag && amethystSound.play()
     setTimeout(() => {
         logo.style.display = 'inline-block'
-        setTimeout(() =>{
-            soundEffectsFlag = true
-            soundEffectsFlag && amethystSound.play()
-        },1000)
     },1000)
 
 })

@@ -52,7 +52,7 @@ body{
     text-shadow: black 1px 1px 1px;
     font-family: Romanica;
     z-index: 1;
-    animation: logo-text 4s ease;
+    animation: logo-text 6s ease;
 }
 .logo-img-container svg {
     position: absolute;
@@ -62,6 +62,7 @@ body{
 .logo-img-container img {
     height: 7.5rem;
     transform: rotate(-20deg);
+    animation: logo-text 6s ease;
 }
 
 .loading-text{

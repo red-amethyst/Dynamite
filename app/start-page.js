@@ -3,9 +3,9 @@ let backgroundMusics = [
     new Audio('./music/background musics/background music (2).m4a'),
     new Audio('./music/background musics/background music (3).m4a'),
 ]
-// let soundEffects = [
-//     new Audio('./music/sound effects/click/click.mp3')
-// ]
+let soundEffects = [
+    new Audio('./music/sound effects/click/click.mp3')
+]
 
 const $ = document
 const ul = $.querySelector('ul')
@@ -28,6 +28,7 @@ function liCreator  (liCount,texts,onClick) {
 }
 
 function start () {
+    soundEffects[0].play()
 
     liCreator(4,['start','options','credits','exit'],[story,option,credit,exit])
 
@@ -52,35 +53,43 @@ function start () {
 }
 
 function story () {
+    soundEffects[0].play()
     liCreator(3,['new game','load game','chapters'],[newGame,oldGame,Chapters])
     backBtn.style.display = 'inline-block'
     backBtn.addEventListener('click',() => back(4,['start','options','credits','exit'],[story,option,credit,exit]))
 }
 function option () {
+    soundEffects[0].play()
     backBtn.style.display = 'inline-block'
         liCreator(4,['start','options','credits','exit'],[story,option,credit,exit]); backBtn.style.display = 'none'
 
 }
 function credit () {
+    soundEffects[0].play()
     backBtn.style.display = 'inline-block'
         liCreator(4,['start','options','credits','exit'],[story,option,credit,exit]); backBtn.style.display = 'none'
 }
 function exit () {
+    soundEffects[0].play()
     console.log('fsroijngfrws')
     window.close()
 }
 
 function newGame () {
+    soundEffects[0].play()
 
 }
 function oldGame () {
+    soundEffects[0].play()
 
 }
 function Chapters () {
+    soundEffects[0].play()
 
 }
 
 function back (liCount,texts,onClick) {
+    soundEffects[0].play()
     liCreator(liCount,texts,onClick)
     backBtn.style.display = 'none'
     backBtn.removeEventListener('click', () => back(liCount,texts,onClick))
