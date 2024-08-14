@@ -1,8 +1,8 @@
-// let backgroundMusics = [
-//     new Audio('./music/background musics/background music (1).mp3'),
-//     new Audio('./music/background musics/background music (2).mp3'),
-//     new Audio('./music/background musics/background music (3).mp3'),
-// ]
+let backgroundMusics = [
+    new Audio('./music/background musics/background music (1).m4a'),
+    new Audio('./music/background musics/background music (2).m4a'),
+    new Audio('./music/background musics/background music (3).m4a'),
+]
 // let soundEffects = [
 //     new Audio('./music/sound effects/click/click.mp3')
 // ]
@@ -31,18 +31,21 @@ function start () {
 
     liCreator(4,['start','options','credits','exit'],[story,option,credit,exit])
 
-    // let i = 0
-    // let j = 0
-    // setInterval(() => {
-    //     if (j == 0 || backgroundMusics[i].currentTime >= backgroundMusics[i].duration) {
-    //         backgroundMusics[i].currentTime = 0
-    //         i += 1
-    //         if(i == 3) {i = 0}
-    //         console.log(i)
-    //         backgroundMusics[i].play()
-    //         j++
-    //     }
-    // },1000)
+    let i = 0
+    let j = 0
+    setInterval(() => {
+        if (j == 0 || backgroundMusics[i].currentTime >= backgroundMusics[i].duration) {
+            backgroundMusics[i].currentTime = 0
+            i += 1
+            if(i == 3) {i = 0}
+            backgroundMusics[i].play()
+            console.log(i)
+            // console.log(backgroundMusics[i])
+            // console.log(backgroundMusics[i].currentTime)
+            // console.log(backgroundMusics[i].duration)
+            j++
+        }
+    },1000)
 
     backBtn.style.display = 'none'
 
