@@ -2,6 +2,8 @@ const $ = document
 
 let amethystSound = new Audio('./music/sound effects/logo/amethyst.m4a')
 let dynamiteSound = new Audio('./music/sound effects/logo/Creeper_fuse.ogg')
+const rotateContainer = $.querySelector('.rotate-mobile-container')
+const mobile = $.querySelector('.mobile')
 const modal = $.querySelector('.modal-container')
 const accessBtn = $.querySelector('.access-btn')
 const rejectBtn = $.querySelector('.reject-btn')
@@ -20,12 +22,22 @@ const range = $.querySelector('.range')
 
 let soundEffectsFlag = false
 
+
 logo.style.display = 'none'
 loadingContainer.style.display  = 'none'
 gameText.style.display = 'none'
 progressBarContainer.style.display = 'none'
 gameLogo.style.display = 'none'
 gameLogoFire.style.display = 'none'
+
+if (rotateContainer) {
+    modal.style.display = 'none'
+
+    mobile.addEventListener('animationend', () => {
+        rotateContainer.style.display = 'none'
+        modal.style.display = 'inline-block'
+    })
+} 
 
 accessBtn.addEventListener('click', e => {
     $.body.style.backgroundColor = '#fff'

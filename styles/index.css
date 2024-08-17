@@ -28,6 +28,39 @@ body{
     margin-top: 10px;
 }
 
+.rotate-mobile-container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: Roboto;
+    /* font-size: x-large;
+    font-style: none;
+    font-weight: bolder; */
+    display: none;
+}
+.mobile{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    width: 15%;
+    height: 60%;
+    z-index: 1111;
+    border-radius: 10px;
+    border: 5px black solid;
+    border-top: 15px black solid;
+    animation: rotate 2s ease-in-out .25s 1;
+
+}
+.rotate-text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    animation: text-rotate 2s ease-in-out .25s 1;
+
+}
+
 .logo-container{
     position: relative;
     width: 100vw;
@@ -135,6 +168,20 @@ body{
     opacity: .1;
 }
 
+@keyframes rotate {
+    from{
+        transform: translate(-50%,-50%) rotate(0deg);
+
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(90deg);
+    }
+}
+@keyframes text-rotate {
+    to{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
 @keyframes logo-text {
     0%{
         opacity: 0;
@@ -188,5 +235,8 @@ body{
     }
     .logo-img-container svg {
         /* width: 20px; */
+    }
+    .rotate-mobile-container{
+        display: inline-block;
     }
 }
