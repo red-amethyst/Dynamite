@@ -32,35 +32,63 @@ body{
     width: 100vw;
     height: 100vh;
     position: relative;
-    font-family: Roboto;
-    /* font-size: x-large;
+    font-family: Venite;
+    font-size: x-large;
     font-style: none;
-    font-weight: bolder; */
+    font-weight: bolder;
     display: none;
 }
 .mobile{
+    width: 15%;
+    height: 60%;
+    z-index: 1111;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) rotate(90deg);
-    width: 15%;
-    height: 60%;
+    animation: rotate 2s ease-in-out .25s 1;
+}
+.main-mobile{
+    width: 100%;
+    height: 100%;
     z-index: 1111;
     border-radius: 10px;
     border: 5px black solid;
     border-top: 15px black solid;
-    animation: rotate 2s ease-in-out .25s 1;
-
+    position: relative;
+}
+.mobile-top-arrow{
+    position: absolute;
+    left: -30px;
+    top: -40px;
+    transform: rotate(-40deg);
+    animation: arrow 2s linear .25s 1;
+}
+.mobile-bottom-arrow{
+    position: absolute;
+    right: -30px;
+    bottom: -40px;
+    transform: rotate(142deg);
+    animation: arrow 2s linear .25s 1;
 }
 .rotate-text-container{
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) rotate(-90deg);
-    animation: text-rotate 2s ease-in-out .25s 1;
-
+    top: 5%;
+    transform: translate(-50%,0%);
+    animation: rotate-text .5s linear 1;
+    color: #e7b833;
+    -webkit-text-stroke: .5px #252525;
 }
-
+.rotate-warning-text-container{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,0%);
+    display: none;
+    color: #e7b833;
+    -webkit-text-stroke: .5px #252525;
+}
 .logo-container{
     position: relative;
     width: 100vw;
@@ -177,9 +205,26 @@ body{
         transform: translate(-50%,-50%) rotate(90deg);
     }
 }
-@keyframes text-rotate {
-    to{
-        transform: translate(-50%,-50%) rotate(0deg);
+@keyframes arrow {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rotate-text {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 @keyframes logo-text {
