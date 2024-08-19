@@ -16,9 +16,7 @@ const accessBtn = $.querySelector(".access-btn");
 const rejectBtn = $.querySelector(".reject-btn");
 
 // for 'rotate your phone' animation
-console.log(window.outerWidth);
 if (window.outerWidth <= 481) {
-  console.log(window.innerWidth / 2);
   modal.style.display = "none";
   mobile.addEventListener("animationend", () => {
     rotateText.style.display = "inline-block";
