@@ -277,9 +277,6 @@ body {
   .logo-main-container img {
     height: 5rem;
   }
-  .logo-img-container svg {
-    /* width: 20px; */
-  }
 }
 @media screen and (max-width: 481px) {
   .rotate-mobile-container {
