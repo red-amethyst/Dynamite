@@ -56,8 +56,10 @@ rejectBtn.addEventListener("click", (e) => {
 
 // for game logo to show when factory's logo animation ended
 logoText.addEventListener("animationend", (e) => {
-  logo.style.display = "none";
-  loadingContainer.style.display = "block";
+  setTimeout(() => {
+    logo.style.display = "none";
+    loadingContainer.style.display = "block";
+  }, 2500);
 });
 
 const loadingContainer = $.querySelector(".loading-container");
